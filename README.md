@@ -29,6 +29,14 @@ notepad $PROFILE
 oh-my-posh init pwsh --config https://gh.llkk.cc/https://github.com/share121/shell-theme/raw/refs/heads/main/share121.json | Invoke-Expression
 ```
 
+> [!TIP]
+> 如果提示 “无法加载文件 xxx 因为在此系统上禁止运行脚本......" 错误，请运行下面脚本来解除系统的脚本运行限制
+> 
+> ```shell
+> Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+> ```
+> 选择“是（Y）”
+
 ## 鸣谢
 
 修改自
