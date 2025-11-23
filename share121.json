@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-  "version": 2,
+  "version": 3,
   "final_space": true,
   "blocks": [
     {
@@ -13,6 +13,7 @@
           "leading_diamond": "\ue0b6",
           "template": "{{ if .SSHSession }}\ueba9 {{ end }}{{ .UserName }} ",
           "properties": {
+            "cache_duration": "none",
             "display_host": false
           },
           "background": "#EB9654",
@@ -23,6 +24,7 @@
           "style": "powerline",
           "template": " {{ path .Path .Location }} ",
           "properties": {
+            "cache_duration": "none",
             "style": "folder"
           },
           "background": "lightYellow",
@@ -31,31 +33,37 @@
         {
           "type": "git",
           "style": "plain",
-          "template": " branch ({{ .HEAD }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}) ",
+          "template": " {{ .HEAD }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }} ",
           "properties": {
+            "cache_duration": "none",
             "fetch_status": true
           },
           "background": "#25AFF3",
           "foreground": "#ffffff"
         },
         {
-          "type": "spotify",
-          "style": "plain",
-          "template": " {{ .Icon }}{{ if ne .Status \"stopped\" }}{{ .Artist }} - {{ .Track }}{{ end }} ",
+          "type": "node",
+          "style": "powerline",
+          "template": " {{ .PackageManagerIcon }}{{ .PackageManagerName }} ",
           "properties": {
-            "paused_icon": "",
-            "playing_icon": "",
-            "stopped_icon": "",
-            "track_separator": " - "
+            "fetch_package_manager": true
           },
-          "background": "#1BD760",
+          "background": "#6CA35E",
           "foreground": "#ffffff"
+        },
+        {
+          "type": "python",
+          "style": "powerline",
+          "template": "  {{ .Venv }} ",
+          "background": "#254E71",
+          "foreground": "#E2E2E2"
         },
         {
           "type": "time",
           "style": "plain",
           "template": " {{ .CurrentDate | date .Format }} ",
           "properties": {
+            "cache_duration": "none",
             "time_format": "15:04:05"
           },
           "background": "#cc00ff",
@@ -66,6 +74,7 @@
           "style": "plain",
           "template": " {{ .FormattedMs }}s ",
           "properties": {
+            "cache_duration": "none",
             "style": "dallas",
             "threshold": 0
           },
@@ -75,11 +84,10 @@
         {
           "type": "status",
           "style": "diamond",
-          "background_templates": [
-            "{{ if .Error }}#e91e63{{ end }}"
-          ],
+          "background_templates": ["{{ if .Error }}#e91e63{{ end }}"],
           "trailing_diamond": "\ue0b0",
           "properties": {
+            "cache_duration": "none",
             "always_enabled": true
           },
           "background": "#00897b",
@@ -94,11 +102,10 @@
         {
           "type": "status",
           "style": "plain",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}#ff0000{{ end }}"
-          ],
+          "foreground_templates": ["{{ if gt .Code 0 }}#ff0000{{ end }}"],
           "template": "❯ ",
           "properties": {
+            "cache_duration": "none",
             "always_enabled": true
           },
           "foreground": "#ffffff"
