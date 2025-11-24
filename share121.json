@@ -44,7 +44,7 @@
         {
           "type": "node",
           "style": "powerline",
-          "template": " {{ .PackageManagerIcon }}{{ .PackageManagerName }} ",
+          "template": " {{ .PackageManagerName }} ",
           "properties": {
             "fetch_package_manager": true
           },

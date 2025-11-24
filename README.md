@@ -71,6 +71,6 @@ oh-my-posh init pwsh --config <路径>/share121.json | Invoke-Expression
 
 1. 添加了 `Ctrl` + 左键单击 文件夹名称自动打开文件夹的功能
 2. 去除了 `branch (...)` 这个多余的提示文本
-3. 添加了 Node.js 中包管理器的图标和名称展示
+3. 添加了 Node.js 中包管理器名称展示
 4. 添加了 Python Venv 的名称展示
 5. 去除了 Spotify 音乐展示
