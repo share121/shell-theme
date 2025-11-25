@@ -74,3 +74,4 @@ oh-my-posh init pwsh --config <路径>/share121.json | Invoke-Expression
 3. 添加了 Node.js 中包管理器名称展示
 4. 添加了 Python Venv 的名称展示
 5. 去除了 Spotify 音乐展示
+6. 添加了当前时间展示

@@ -59,17 +59,6 @@
           "foreground": "#E2E2E2"
         },
         {
-          "type": "time",
-          "style": "plain",
-          "template": " {{ .CurrentDate | date .Format }} ",
-          "properties": {
-            "cache_duration": "none",
-            "time_format": "15:04:05"
-          },
-          "background": "#cc00ff",
-          "foreground": "#ffffff"
-        },
-        {
           "type": "executiontime",
           "style": "plain",
           "template": " {{ .FormattedMs }}s ",
