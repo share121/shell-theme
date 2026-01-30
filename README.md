@@ -45,10 +45,10 @@ oh-my-posh init pwsh --config https://gh.llkk.cc/https://github.com/share121/she
 
 #### 方式二：从本地文件加载主题
 
-每次从 Github 下载文件太慢了，可以下载 [share121.json](https://raw.githubusercontent.com/share121/shell-theme/refs/heads/main/share121.json) 然后存到随便一个文件夹里
+每次从 Github 下载文件太慢了，可以下载[本项目](https://github.com/share121/shell-theme/archive/refs/heads/main.zip)，然后随便解压到一个地方
 
 > [!TIP]
-> 右键[此链接](https://raw.githubusercontent.com/share121/shell-theme/refs/heads/main/share121.json)，选择“将链接另存为”即可下载
+> 右键[此链接](https://github.com/share121/shell-theme/archive/refs/heads/main.zip)，选择“将链接另存为”即可下载
 
 ```shell
 oh-my-posh init pwsh --config <路径>/share121.json | Invoke-Expression
@@ -70,8 +70,7 @@ oh-my-posh init pwsh --config <路径>/share121.json | Invoke-Expression
 的主题
 
 1. 添加了 `Ctrl` + 左键单击 文件夹名称自动打开文件夹的功能
-2. 去除了 `branch (...)` 这个多余的提示文本
-3. 添加了 Node.js 中包管理器名称展示
-4. 添加了 Python Venv 的名称展示
+2. 添加了 Node.js 中包管理器名称展示
+3. 添加了 Python Venv 的名称展示
+4. 去除了 `branch (...)` 这个多余的提示文本
 5. 去除了 Spotify 音乐展示
-6. 添加了当前时间展示
